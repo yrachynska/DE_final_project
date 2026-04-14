@@ -1,11 +1,20 @@
-{{ config(tags=['daily']) }}
+
+  
+    
+    
+
+    create  table
+      "my_database"."main"."mart_sales__dbt_tmp"
+  
+    as (
+      
 
 with sales as (
-    select * from {{ ref('stg_sales_reps') }}
+    select * from "my_database"."main"."stg_sales_reps"
 ),
 
 heads as (
-    select * from {{ ref('stg_heads') }}
+    select * from "my_database"."main"."stg_heads"
 ),
 
 joined as (
@@ -20,3 +29,6 @@ joined as (
 )
 
 select * from joined
+    );
+  
+  

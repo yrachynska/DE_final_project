@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: raw_data
-    database: main
+    #database: main
     schema: main
     description: "Raw data ingested by Airflow from MySQL, JSON, and MinIO"
     tables:

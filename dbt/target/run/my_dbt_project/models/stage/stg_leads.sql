@@ -1,7 +1,10 @@
-{{ config(tags=['hourly']) }}
+
+  
+  create view "my_database"."main"."stg_leads__dbt_tmp" as (
+    
 
 with raw_data as (
-    select * from {{ ref('raw_leads') }}
+    select * from "my_database"."main"."raw_leads"
 ),
 
 renamed as (
@@ -17,3 +20,4 @@ renamed as (
 )
 
 select * from renamed
+  );

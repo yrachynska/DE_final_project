@@ -1,7 +1,7 @@
-{{ config(tags=['hourly']) }}
+
 
 with raw_data as (
-    select * from {{ ref('raw_leads') }}
+    select * from "my_database"."main"."raw_leads"
 ),
 
 renamed as (

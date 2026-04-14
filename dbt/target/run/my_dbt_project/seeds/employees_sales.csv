@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "my_database"."main"."employees_sales" ("key" integer,"name_surname" text,"head_key" integer,"date_start" date,"date_end" integer,"email" text,"phone" text,"salary" float8)
+  ;
+    -- dbt seed --
+    
+          COPY "my_database"."main"."employees_sales" FROM '/Users/sofiatiutiuskina/PycharmProjects/DataEngineering/Assignments/DE_final_project/dbt/seeds/employees_sales.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

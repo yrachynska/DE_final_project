@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "my_database"."main"."employees_coordinators" ("key" integer,"name_surname" text,"head_key" integer,"date_start" date,"date_end" integer,"email" text,"phone" text)
+  ;
+    -- dbt seed --
+    
+          COPY "my_database"."main"."employees_coordinators" FROM '/Users/sofiatiutiuskina/PycharmProjects/DataEngineering/Assignments/DE_final_project/dbt/seeds/employees_coordinators.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  
