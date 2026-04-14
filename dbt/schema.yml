@@ -1,0 +1,45 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: main
+    schema: main
+    description: "Raw data ingested by Airflow from MySQL, JSON, and MinIO"
+    tables:
+      - name: raw_applicant
+        description: "Applicant data from MySQL"
+        columns:
+          - name: key
+            tests:
+              - unique
+              - not_null
+
+      - name: raw_advertising_companies
+        description: "Ad campaigns data from MinIO"
+        columns:
+          - name: key
+            tests:
+              - unique
+              - not_null
+
+      - name: raw_leads
+        description: "Leads data from JSON logs"
+
+      - name: raw_calls
+        description: "Call logs from JSON logs"
+
+seeds:
+  - name: programs
+    description: "List of educational programs"
+    config:
+      column_types:
+        cost: double
+
+  - name: heads
+    description: "Department heads"
+
+  - name: employees_sales
+    description: "Sales department staff"
+
+  - name: employees_coordinators
+    description: "Coordinator department staff"
