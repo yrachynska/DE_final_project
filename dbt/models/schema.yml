@@ -14,7 +14,7 @@ sources:
               - unique
               - not_null
 
-      - name: raw_advertising_companies
+      - name: raw_advertising
         description: "Ad campaigns data from MinIO"
         columns:
           - name: key
