@@ -3,7 +3,7 @@ my_dbt_project:
   outputs:
     dev:
       type: duckdb
-      path: ../data/my_database.duckdb
+      path: ../data/marketing.duckdb
       extensions:
         - httpfs
       settings:
